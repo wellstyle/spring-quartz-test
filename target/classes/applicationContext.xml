@@ -18,13 +18,12 @@
 
 	<bean id="testController" class="test.control.TestController"/>
 
-	<!-- 포인트 처리 : 매일 자정에 한번 시작된다.  -->
+	
 	<bean id="myjob1" class="org.springframework.scheduling.quartz.JobDetailBean">
 		<property name="jobClass" value="test.main.MyJob1" />
 		<property name="applicationContextJobDataKey" value="applicationContext" />
 	</bean>	
 	
-	<!-- 포인트 처리 : 매일 자정에 한번 시작된다.  -->
 	<bean id="myjob2" class="org.springframework.scheduling.quartz.JobDetailBean">
 		<property name="jobClass" value="test.main.MyJob2" />
 		<property name="applicationContextJobDataKey" value="applicationContext" />
@@ -33,13 +32,13 @@
 	<bean id="cronTrigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail" ref="myjob1" />		
 		<!-- 매 10초마다 실행 -->
-		<property name="cronExpression" value="*/7 * * * * ?" />
+		<property name="cronExpression" value="*/10 * * * * ?" />
 	</bean>
 
 	<bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail" ref="myjob2" />
 		<!-- 매 15초마다 실행 -->
-		<property name="cronExpression" value="*/10 * * * * ?" />
+		<property name="cronExpression" value="*/15 * * * * ?" />
 	</bean>
 
 	<bean id="scheduler"

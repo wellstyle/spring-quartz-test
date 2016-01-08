@@ -9,9 +9,9 @@ spring-quartz-test
 사용된 오픈소스|버전
 ------------|---
 java|1.7
-spring|3.2.8
+spring|4.1.8
 maven|3.2.3
-quartz|1.8
+quartz|2.2
 
 -----
 설치방법은 eclipse에서 아래와 같이 처리합니다. 

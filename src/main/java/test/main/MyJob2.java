@@ -6,6 +6,6 @@ public class MyJob2 extends MyAbstractJob{
 	
 	@Override
 	protected void executeJob(TestController testController) {	
-		testController.showMe("MyJob1 called ");			
+		testController.showMe("MyJob2 called ");			
 	}
 }
